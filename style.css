@@ -1,0 +1,70 @@
+body{
+    background-color: #FEF2F1;
+    Font-size: 16px;
+    padding-left: 120px; 
+padding-bottom: 0px;
+padding-top: 1px;
+}
+
+.model{
+    width: 50vw;
+    height: 100vh;
+    margin-top: 0px;
+    float: right;
+}
+.logo{
+    padding-top: 100px;
+}
+h1{
+    font-weight: bold;
+    color: #C89C99;
+    grid-area: title; 
+    padding-top: 2em;
+}
+
+p{
+    display: block;
+    grid-area:p;
+    padding-top: 2em;
+    color: #CAB3B6;
+    text-align: justify;
+
+}
+
+span{
+    color:#42393A;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". imag . . img img img img"
+      ". title . . img img img img"
+      ". p . . img img img img"
+      ". control-form button . img img img img"
+}  
+
+.Email {
+      margin-top: 30px;
+      padding-bottom: 1px;
+    border-radius: 50px;
+    color: #CAB3B6;
+    line-height: 21px;
+    height: 50px;
+}
+.button { 
+    font-size: 18px;
+    border-radius: 100px;
+    width: 90px;
+    padding-bottom: 3em;
+    background: #EE8C8C;
+    background-image: url(/Assets/img/icon-arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat ;
+    height: 45px;
+    margin-left: -50px;
+    margin-top: 25px;
+}
