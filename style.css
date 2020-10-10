@@ -1,34 +1,44 @@
 body{
-    background-color: #FEF2F1;
-    Font-size: 16px;
-    padding-left: 120px; 
-padding-bottom: 0px;
-padding-top: 1px;
+    background-image: url(/img/bg-pattern-desktop.svg),linear-gradient( hsl(0, 0%, 100%),hsl(0, 100%, 98%)); 
+    padding-left: 10vw; 
+    padding-bottom: 0vh;
+    padding-top: 0vw;
 }
 
 .model{
     width: 50vw;
     height: 100vh;
-    margin-top: 0px;
     float: right;
 }
 .logo{
-    padding-top: 100px;
+    padding-top: 10vh;
 }
 h1{
-    font-weight: bold;
-    color: #C89C99;
+    letter-spacing: 20px;
     grid-area: title; 
-    padding-top: 2em;
+    padding-top: 16vh;
+   
 }
-
+.we{
+    font-size: 9vh;
+    color: #C89C99;
+    font-family: 'Josefin Sans';
+    
+}
+.black_bold{
+    font-size: 9vh;
+    font-weight: 400;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+/*  Weights: 300, 400, 600 */
 p{
-    display: block;
-    grid-area:p;
-    padding-top: 2em;
+    padding-top: 2vh;
     color: #CAB3B6;
-    text-align: justify;
-
+    border: 0px ;
+    width: 27vw;
+    font-family: 'Josefin Sans';
+    font-size: 16px;
+    font-weight: 60;
 }
 
 span{
@@ -38,7 +48,7 @@ span{
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
     gap: 0px 0px;
     grid-template-areas:
       ". imag . . img img img img"
@@ -48,23 +58,33 @@ span{
 }  
 
 .Email {
-      margin-top: 30px;
-      padding-bottom: 1px;
+      margin-top: 4vh;
+      /* padding-bottom: 1px; */
     border-radius: 50px;
-    color: #CAB3B6;
-    line-height: 21px;
-    height: 50px;
+    color: hsl(0, 36%, 70%);
+    height: 6.8vh;
+    width: 25vw;
+    border-style: double;
+    border-color:0px, hsla(352,18%,75%,0.12);
+    padding-left: 2vw;
+    background-color: transparent;
 }
+::placeholder {
+    color: #CAB3B6;
+    font-size: 2vh;
+    font-family: 'Josefin Sans';
+    
+  }
 .button { 
-    font-size: 18px;
     border-radius: 100px;
-    width: 90px;
-    padding-bottom: 3em;
-    background: #EE8C8C;
-    background-image: url(/Assets/img/icon-arrow.svg);
+    width: 6.8vw;
+    padding-bottom: 5vh;
+    background-image: url(img/icon-arrow.svg), linear-gradient(to right,hsla(0, 80%, 86%,.8), hsla(0, 74%, 74%, .8));
     background-position: center;
     background-repeat: no-repeat ;
-    height: 45px;
-    margin-left: -50px;
-    margin-top: 25px;
+    background-color: #EE8C8C;
+    height: 7.3vh;
+    margin-left: -5vw;
+    margin-top: 3.8vh;
+    border: 0;
 }
