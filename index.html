@@ -12,23 +12,32 @@
 </head>
 
 <body>
-    <img src="img/logo.svg" alt="Base Apparel" class="logo">
-    <img src="img/hero-desktop.jpg" alt="Desktop" class="model">
-    <!-- <img src="/Assets/img/hero-mobile.jpg" alt="mobile" class="mobile"> -->
+    <div class="wrapper">
+        <div class="wrapp-logo">
+            <img src="img/logo.svg" alt="Base Apparel" class="logo">
+        </div>
+        <div class="pict">
+            <picture>
+                <img src="img/hero-desktop.jpg" alt="Desktop" class="model">
+            </picture>
+            <picture>
+                <img src="/img/hero-mobile.jpg" alt="Desktop" class="mobile">
+            </picture>
+        </div>
+        <div class="title">
+            <h1><span class="we"> WE'RE </span><br> <span class="black_bold"> COMING <br> SOON</span></h1>
+        </div>
+        <div class="para">
+            <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay
+                up-to-date with annoucements and our lauch deats.
+            </p>
+        </div>
 
-    <h1><span class="we"> WE'RE </span><br> <span class="black_bold"> COMING <br> SOON</span></h1>
-    <div>
-        <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay
-            up-to-date with annoucements and our lauch deats.
-        </p>
         <div class="grid-container">
             <input type="text" class="Email" name="name" required size="25" placeholder="Email Adress">
             <div class="background">
                 <input class="button" name="Submit" value="" onClick="clickit(this);">
             </div>
-            <!-- <button class="favorite styled" type="button">
-
-            </button> -->
         </div>
     </div>
     <!-- Script -->
