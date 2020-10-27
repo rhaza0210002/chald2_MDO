@@ -4,30 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Assets/style.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Josefin+Sans">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Base Apparel</title>
 </head>
 
 <body>
-    <img src="/Assets/img/logo.svg" alt="Base Apparel" class="logo">
-    <img src="/Assets/img/hero-desktop.jpg" alt="Desktop" class="model">
-    <!-- <img src="/Assets/img/hero-mobile.jpg" alt="mobile" class="mobile"> -->
+    <div class="wrapper">
+        <div class="wrapp-logo">
+            <img src="img/logo.svg" alt="Base Apparel" class="logo">
+        </div>
+        <div class="pict">
+            <picture>
+                <img src="img/hero-desktop.jpg" alt="Desktop" class="model">
+            </picture>
+            <picture>
+                <img src="/img/hero-mobile.jpg" alt="Desktop" class="mobile">
+            </picture>
+        </div>
+        <div class="title">
+            <h1><span class="we"> WE'RE </span><br> <span class="black_bold"> COMING <br> SOON</span></h1>
+        </div>
+        <div class="para">
+            <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay
+                up-to-date with annoucements and our lauch deats.
+            </p>
+        </div>
 
-    <h1>WE'RE <br> <span> COMING <br> SOON</span></h1>
-    <div>
-        <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay
-            up-to-date with annoucements and our lauch deats.
-        </p>
         <div class="grid-container">
             <input type="text" class="Email" name="name" required size="25" placeholder="Email Adress">
             <div class="background">
                 <input class="button" name="Submit" value="" onClick="clickit(this);">
             </div>
-            <!-- <button class="favorite styled" type="button">
-
-            </button> -->
         </div>
     </div>
     <!-- Script -->
