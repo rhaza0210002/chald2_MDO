@@ -248,8 +248,8 @@ span{
 @media screen and (min-width:480px), (max-wiidth:1440px){
 .model{
     display: grid;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 50vw;
     float: right;
     overflow : hidden;
 }
