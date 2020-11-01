@@ -1,33 +1,74 @@
-body{
-    background-color: #FEF2F1;
-    Font-size: 16px;
-    padding-left: 120px; 
-padding-bottom: 0px;
-padding-top: 1px;
-}
-
-.model{
-    width: 50vw;
+.wrapper{
+    width: 100vw;
     height: 100vh;
-    margin-top: 0px;
-    float: right;
-}
-.logo{
-    padding-top: 100px;
-}
-h1{
-    font-weight: bold;
-    color: #C89C99;
-    grid-area: title; 
-    padding-top: 2em;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "logo img"
+    "title img"
+    "text img"
+    "input img";
+    background-image: url(/img/bg-pattern-desktop.svg),linear-gradient( hsl(0, 0%, 100%),hsl(0, 100%, 98%)); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Josefin Sans';
+
 }
 
+.pict{
+    grid-area: img;
+    
+}
+.model{
+    
+}
+.mobile{
+    display: none;
+}
+
+.wrapp-logo{
+    grid-area: logo;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 16vw;
+}
+.title{
+    letter-spacing: 20px;
+    grid-area: title; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.we{
+    font-size: 9vh;
+    color: #C89C99;
+    font-family: 'Josefin Sans';
+    
+}
+.black_bold{
+    font-size: 9vh;
+    font-weight: 400;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+/*  Weights: 300, 400, 600 */
+
+.para{
+    grid-area: text;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
 p{
-    display: block;
-    grid-area:p;
-    padding-top: 2em;
     color: #CAB3B6;
-    text-align: justify;
+    border: 0px ;
+    width: 27vw;
+    font-size: 16px;
+    font-weight: bold;
 
 }
 
@@ -35,36 +76,182 @@ span{
     color:#42393A;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      ". imag . . img img img img"
-      ". title . . img img img img"
-      ". p . . img img img img"
-      ". control-form button . img img img img"
-}  
 
-.Email {
-      margin-top: 30px;
-      padding-bottom: 1px;
-    border-radius: 50px;
-    color: #CAB3B6;
-    line-height: 21px;
-    height: 50px;
+.grid-container{
+    grid-area: input;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+.Email {
+    
+    border-radius: 50px;
+    color: hsl(0, 36%, 70%);
+    height: 6.8vh;
+    width: 25vw;
+    border-style: double;
+    border-color:0px, hsla(352,18%,75%,0.12);
+    padding-left: 2vw;
+    background-color: transparent;
+}
+
+::placeholder {
+    color: #CAB3B6;
+    font-size: 2vh;
+    font-family: 'Josefin Sans';
+    
+  }
+  
+  #logoError{
+    margin-top: -10vh;
+    margin-left: 20vw;
+    position: relative;
+    visibility: hidden;
+  }
+
+  #email{
+    border-color:hsla(352,18%,75%,0.12);
+  }
+
+  #email:focus:invalid{
+    border-color: hsl(0, 93%, 68%,0.5);
+  }
+
+  input:focus:invalid {
+    outline: none;
+    background-color:transparent;
+  }
+
+  .error {
+    font-size: 80%;
+    color: #DAADAF;
+  }
+
+  .error.active {
+    color: #DAADAF;
+    margin-left: -18vw;
+
+  }
+
+  .backgroung{
+      grid-area: input;
+
+  }
 .button { 
-    font-size: 18px;
     border-radius: 100px;
-    width: 90px;
-    padding-bottom: 3em;
-    background: #EE8C8C;
-    background-image: url(/Assets/img/icon-arrow.svg);
+    width: 6.8vw;
+    background-image: url(img/icon-arrow.svg), linear-gradient(to right,hsla(0, 80%, 86%,.8), hsla(0, 74%, 74%, .8));
     background-position: center;
     background-repeat: no-repeat ;
-    height: 45px;
-    margin-left: -50px;
-    margin-top: 25px;
+    background-color: #EE8C8C;
+    height: 6.8vh;
+    margin-left: -5vw;
+    border: 0;
+    box-shadow: 10px 10px 5px hsl(0, 93%, 68%, 0.1);
+}
+
+@media screen and (max-width: 375px) {
+  .wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10vh 1fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 50vw 1fr;
+    grid-template-areas: 
+    "logo ."
+    "img img"
+    ". ."
+    "title title"
+    "txt txt"
+    "input input";
+    font-size: 16px;
+    background-image: url(/img/bg-pattern-desktop.svg),linear-gradient( hsl(0, 0%, 100%),hsl(0, 100%, 98%)); 
+    background-repeat: no-repeat;
+    background-size: contain;
+
+  }
+  
+  .wrapp-logo{
+    grid-area: logo;
+    margin-left: 30px;
+    align-items: center;
+
+  }  
+  .model{
+    display: none;
+  }
+
+  .mobile{
+    display: grid;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    grid-area: img;
+  }
+
+  .title{
+    grid-area: title;
+    text-align: center;
+  }
+
+  .we{
+    font-size: 32px;
+  }
+
+  .black_bold{
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .para{
+    grid-area: txt;
+    justify-content: center; 
+
+  }
+  p{
+    width: 80vw;
+    text-align: center;
+    font-size: 0.8em;
+  }
+  .grid-container{
+    grid-area: input;
+  }
+  .Email {
+    height: 7vh;
+    width: 60vw;
+    padding-left: 2vw;
+    /* margin-left: -15vw; */
+  }
+
+  #logoError{
+  margin-left: 25vw;
+  }
+  
+  .error.active {
+    color: #DAADAF;
+    margin-left: -40vw;
+
+  }
+
+  .backgroung{
+      grid-area: input;
+  }
+  .button { 
+    width: 19vw;
+    height: 7vh;
+    margin-left: -26vw;
+}
+
+
+}
+
+@media screen and (min-width:480px), (max-wiidth:1440px){
+.model{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    float: right;
+    overflow : hidden;
+}
+
 }

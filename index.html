@@ -17,23 +17,22 @@
         alt="Desktop" class="model">
     <!-- <img src="/Assets/img/hero-mobile.jpg" alt="mobile" class="mobile"> -->
 
-    <h1>WE'RE <br> <span> COMING <br> SOON</span></h1>
-    <div>
-        <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay
-            up-to-date with annoucements and our lauch deats.
+    <form class="grid-container" novalidate>
+        <p>
+            <label for="email">
+                <input type="text" class="Email" id="email" name="name" required size="25"
+                    pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$" value=""
+                    placeholder="Email Address">
+                <img src="/img/icon-error.svg" id="logoError" alt="">
+                <span class="error" aria-live="polite"></span>
+            </label>
         </p>
-        <div class="grid-container">
-            <input type="text" class="Email" name="name" required size="25" placeholder="Email Adress">
-            <div class="background">
-                <input class="button" name="Submit" value="" onClick="clickit(this);">
-            </div>
-            <!-- <button class="favorite styled" type="button">
-
-            </button> -->
+        <div class="background">
+            <button class="button" value=""></button>
         </div>
+    </form>
     </div>
     <!-- Script -->
-    <script src="/Assets/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -43,6 +42,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+
 </body>
 
 </html>
