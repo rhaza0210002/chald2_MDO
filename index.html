@@ -33,12 +33,19 @@
             </p>
         </div>
 
-        <div class="grid-container">
-            <input type="text" class="Email" name="name" required size="25" placeholder="Email Adress">
+        <form class="grid-container" novalidate>
+            <p>
+                <label for="email">
+                    <input type="text" class="Email" id="email" name="name" required size="25"
+                        pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$" value="" placeholder="Email Address">
+                        <img src="/img/icon-error.svg" id="logoError" alt="">
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </p>
             <div class="background">
-                <input class="button" name="Submit" value="" onClick="clickit(this);">
+                <button class="button" value=""></button>
             </div>
-        </div>
+        </form>
     </div>
     <!-- Script -->
     <script src="/Assets/script.js"></script>

@@ -94,15 +94,48 @@ span{
     padding-left: 2vw;
     background-color: transparent;
 }
+
 ::placeholder {
     color: #CAB3B6;
     font-size: 2vh;
     font-family: 'Josefin Sans';
     
   }
+  
+  #logoError{
+    margin-top: -10vh;
+    margin-left: 20vw;
+    position: relative;
+    visibility: hidden;
+  }
+
+  #email{
+    border-color:hsla(352,18%,75%,0.12);
+  }
+
+  #email:focus:invalid{
+    border-color: hsl(0, 93%, 68%,0.5);
+  }
+
+  input:focus:invalid {
+    outline: none;
+    background-color:transparent;
+  }
+
+  .error {
+    font-size: 80%;
+    color: #DAADAF;
+  }
+
+  .error.active {
+    color: #DAADAF;
+    margin-left: -18vw;
+
+  }
 
   .backgroung{
       grid-area: input;
+
   }
 .button { 
     border-radius: 100px;
@@ -111,9 +144,10 @@ span{
     background-position: center;
     background-repeat: no-repeat ;
     background-color: #EE8C8C;
-    height: 7.3vh;
+    height: 6.8vh;
     margin-left: -5vw;
     border: 0;
+    box-shadow: 10px 10px 5px hsl(0, 93%, 68%, 0.1);
 }
 
 @media screen and (max-width: 375px) {
@@ -183,18 +217,29 @@ span{
     grid-area: input;
   }
   .Email {
-    
+    height: 7vh;
     width: 60vw;
     padding-left: 2vw;
-}
+    /* margin-left: -15vw; */
+  }
+
+  #logoError{
+  margin-left: 25vw;
+  }
+  
+  .error.active {
+    color: #DAADAF;
+    margin-left: -40vw;
+
+  }
 
   .backgroung{
       grid-area: input;
   }
-.button { 
+  .button { 
     width: 19vw;
     height: 7vh;
-    margin-left: -15vw;
+    margin-left: -26vw;
 }
 
 
@@ -208,4 +253,5 @@ span{
     float: right;
     overflow : hidden;
 }
+
 }
